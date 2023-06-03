@@ -1,16 +1,36 @@
 import Logo from "../../assets/LOGO.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../utils/styles/Header.css";
+
+// const header = document.getElementsByClassName("Header");
+
+// function appendContent() {
+//     const createLink = document.createElement("Link");
+//     const createImg = document.createElement("img");
+
+//     header.appendChild(createLink);
+//     createLink.setAttribute("to", "/");
+
+//     createLink.appendChild(createImg);
+
+//     createImg.setAttribute("className", "logo");
+//     createImg.setAttribute("src", { Logo });
+// }
 
 export default function Header() {
     return (
         <header className="Header">
             <Link to="/">
-                <img src={Logo} />
+                <img className="logo" src={Logo} />
             </Link>
-            <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/">A Propos</Link>
+            {/* {appendContent()} */}
+            <nav className="header-nav">
+                <NavLink className="accueil-link" to="/" exact>
+                    Accueil
+                </NavLink>
+                <NavLink className="apropos-link" to="/a-propos">
+                    A Propos
+                </NavLink>
             </nav>
         </header>
     );

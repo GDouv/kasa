@@ -4,6 +4,8 @@ import "./utils/styles/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
+import APropos from "./pages/APropos";
+import FicheLogement from "./pages/FicheLogement";
 import Error from "./pages/Error";
 
 const router = createBrowserRouter([
@@ -12,10 +14,19 @@ const router = createBrowserRouter([
         element: <Home />,
         errorElement: <Error />,
     },
+    {
+        path: "/a-propos",
+        element: <APropos />,
+        errorElement: <Error />,
+    },
+    {
+        path: "/fiche-logement",
+        element: <FicheLogement />,
+        errorElement: <Error />,
+    },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <RouterProvider router={router} />
     </React.StrictMode>

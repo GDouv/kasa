@@ -1,18 +1,18 @@
-import HomeBackgroundImg from "../../assets/IMG.jpg";
-import "../../utils/styles/Background.css";
+import HomeBannerImg from "../../assets/IMG.jpg";
+import "../../utils/styles/Banner.css";
 
 export default function Background() {
     return (
         <div className="bg-banner">
             <div className="bg-img-container">
                 <img
-                    src={HomeBackgroundImg}
+                    src={HomeBannerImg}
                     alt="Image de fond: photographie d'une falaise rocheuse peuplée de quelques arbres, avec une mer agitée, par temps gris."
                     className="bg-img"
                 />
             </div>
             <div className="bg-title-container">
-                <h1 className="home-title">Chez vous, partout et ailleurs</h1>
+                <h1 className="bg-title">Chez vous, partout et ailleurs</h1>
             </div>
         </div>
     );

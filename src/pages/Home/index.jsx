@@ -1,14 +1,14 @@
 import Header from "../../components/Header";
-import Background from "../../components/Background";
+import Banner from "../../components/Banner";
 import "../../utils/styles/Home.css";
 
-function Home() {
+export default function Home() {
     return (
         <>
             <Header />
             <main className="Home">
                 <section>
-                    <Background />
+                    <Banner />
                 </section>
                 <section>
                     <div></div>
@@ -22,5 +22,3 @@ function Home() {
         </>
     );
 }
-
-export default Home;
