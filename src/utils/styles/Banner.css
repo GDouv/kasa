@@ -1,87 +1,80 @@
+.bg-img-container {
+    display: flex;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.bg-img {
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.bg-title-container {
+    position: absolute;
+    display: flex;
+}
+
+.bg-title {
+    z-index: 1;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
 @media screen and (min-width: 1024px) {
     .bg-banner {
-        max-width: 1240px;
         display: flex;
         justify-content: center;
     }
 
     .bg-img-container {
-        display: flex;
         max-height: 223px;
         max-width: 1240px;
-        background-color: #000000;
         border-radius: 25px;
-        z-index: 1;
-        overflow: hidden;
     }
 
     .bg-img {
-        object-fit: cover;
-        opacity: 0.7;
         border-radius: 25px;
     }
 
     .bg-title-container {
-        display: flex;
-        justify-content: center;
-        position: absolute;
         top: 221px;
         max-width: 1240px;
     }
 
     .bg-title {
-        z-index: 1;
-        color: white;
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 500;
+        width: 705px;
         font-size: 48px;
         line-height: 142.6%;
         /* or 68px */
-
-        width: 705px;
     }
 }
 
 @media screen and (min-width: 766px) and (max-width: 1023px) {
     .bg-banner {
-        max-width: 1023px;
         display: flex;
         justify-content: center;
     }
 
     .bg-img-container {
-        display: flex;
         max-height: 150px;
-        background-color: #000000;
-        border-radius: 15px;
-        z-index: 1;
-        overflow: hidden;
         max-width: 920px;
+        border-radius: 15px;
     }
 
     .bg-img {
-        object-fit: cover;
-        opacity: 0.7;
         border-radius: 15px;
         max-width: 920px;
     }
 
     .bg-title-container {
-        position: absolute;
         top: 157px;
-        display: flex;
-        justify-content: center;
-        padding-left: 30px;
+        padding-left: 35px;
     }
 
     .bg-title {
         width: 500px;
-        z-index: 1;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-weight: 500;
         font-size: 30px;
         line-height: 100%;
         /* or 24px */
@@ -90,40 +83,38 @@
 
 @media screen and (max-width: 767px) {
     .bg-img-container {
-        display: flex;
         max-height: 111px;
-        background-color: #000000;
         border-radius: 10px;
-        z-index: 1;
-        overflow: hidden;
         max-width: 600px;
     }
 
     .bg-img {
-        object-fit: cover;
-        opacity: 0.7;
         border-radius: 10px;
         max-width: 600px;
         scale: 1;
     }
 
     .bg-title-container {
-        position: absolute;
         top: 103px;
-        display: flex;
-        justify-content: left;
         padding-left: 16px;
     }
 
     .bg-title {
         width: 217px;
-        z-index: 1;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-weight: 500;
         font-size: 24px;
         line-height: 100%;
         /* or 24px */
+    }
+}
+
+@media screen and (max-width: 312px) {
+    .bg-title-container {
+        top: 118px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .bg-title {
+        width: 150px;
     }
 }
