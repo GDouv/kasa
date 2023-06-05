@@ -1,5 +1,5 @@
-import Logo from "../../assets/LOGO.svg";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../../assets/LOGO.svg";
 import "../../utils/styles/Header.css";
 
 // const header = document.getElementsByClassName("Header");

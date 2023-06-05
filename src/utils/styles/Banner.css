@@ -17,15 +17,13 @@
 .bg-title {
     z-index: 1;
     color: white;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 500;
 }
 
 @media screen and (min-width: 1024px) {
     .bg-banner {
         display: flex;
         justify-content: center;
+        margin: 0 100px 43px 100px;
     }
 
     .bg-img-container {
@@ -55,6 +53,7 @@
     .bg-banner {
         display: flex;
         justify-content: center;
+        margin: 0 60px 30px 60px;
     }
 
     .bg-img-container {
@@ -82,15 +81,19 @@
 }
 
 @media screen and (max-width: 767px) {
+    .bg-banner {
+        margin: 0 20px 22px 20px;
+    }
+
     .bg-img-container {
         max-height: 111px;
         border-radius: 10px;
-        max-width: 600px;
+        max-width: 740px;
     }
 
     .bg-img {
         border-radius: 10px;
-        max-width: 600px;
+        max-width: 740px;
         scale: 1;
     }
 
