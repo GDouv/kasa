@@ -1,48 +1,48 @@
-.bg-img-container {
+.img-container {
     display: flex;
     background-color: #000000;
     overflow: hidden;
 }
 
-.bg-img {
+.img {
     width: 100%;
     object-fit: cover;
     opacity: 0.7;
 }
 
-.bg-title-container {
+.title-container {
     position: absolute;
     display: flex;
 }
 
-.bg-title {
+.title {
     z-index: 1;
     color: white;
 }
 
 @media screen and (min-width: 1024px) {
-    .bg-banner {
+    .banner {
         display: flex;
         justify-content: center;
         margin: 0 100px 43px 100px;
     }
 
-    .bg-img-container {
+    .img-container {
         max-height: 223px;
         max-width: 1240px;
         border-radius: 25px;
     }
 
-    .bg-img {
+    .img {
         border-radius: 25px;
     }
 
-    .bg-title-container {
+    .title-container {
         top: 221px;
         max-width: 1240px;
     }
 
-    .bg-title {
+    .title {
         width: 705px;
         font-size: 48px;
         line-height: 142.6%;
@@ -50,29 +50,29 @@
     }
 }
 
-@media screen and (min-width: 766px) and (max-width: 1023px) {
-    .bg-banner {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .banner {
         display: flex;
         justify-content: center;
         margin: 0 60px 32.5px 60px;
     }
 
-    .bg-img-container {
+    .img-container {
         max-height: 150px;
         max-width: 920px;
         border-radius: 15px;
     }
 
-    .bg-img {
+    .img {
         border-radius: 15px;
     }
 
-    .bg-title-container {
+    .title-container {
         top: 157px;
         padding-left: 35px;
     }
 
-    .bg-title {
+    .title {
         width: 500px;
         font-size: 30px;
         line-height: 100%;
@@ -81,27 +81,27 @@
 }
 
 @media screen and (max-width: 767px) {
-    .bg-banner {
+    .banner {
         margin: 0 20px 22px 20px;
     }
 
-    .bg-img-container {
+    .img-container {
         max-height: 111px;
         max-width: 740px;
         border-radius: 10px;
     }
 
-    .bg-img {
+    .img {
         border-radius: 10px;
         scale: 1.85;
     }
 
-    .bg-title-container {
+    .title-container {
         top: 103px;
         padding-left: 16px;
     }
 
-    .bg-title {
+    .title {
         width: 217px;
         font-size: 24px;
         line-height: 100%;
@@ -110,13 +110,13 @@
 }
 
 @media screen and (max-width: 312px) {
-    .bg-title-container {
+    .title-container {
         top: 118px;
     }
 }
 
 @media screen and (max-width: 280px) {
-    .bg-title {
+    .title {
         width: 150px;
     }
 }

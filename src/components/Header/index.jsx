@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.svg";
-import "../../utils/styles/Header.css";
+import headerStyle from "../../utils/styles/Header.module.css";
 
 // const header = document.getElementsByClassName("Header");
 
@@ -19,16 +19,31 @@ import "../../utils/styles/Header.css";
 
 export default function Header() {
     return (
-        <header className="Header">
+        <header className={headerStyle.header}>
             <Link to="/">
-                <img className="logo" src={Logo} />
+                <img className={headerStyle.logo} src={Logo} />
             </Link>
             {/* {appendContent()} */}
-            <nav className="header-nav">
-                <NavLink className="accueil-link" to="/" exact>
+            <nav className={headerStyle.nav}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive
+                            ? `${headerStyle["accueil-link"]} ${headerStyle.active}`
+                            : headerStyle["accueil-link"]
+                    }
+                    to="/"
+                    exact
+                >
                     Accueil
                 </NavLink>
-                <NavLink className="apropos-link" to="/a-propos">
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive
+                            ? `${headerStyle["apropos-link"]} ${headerStyle.active}`
+                            : headerStyle["apropos-link"]
+                    }
+                    to="/a-propos"
+                >
                     A Propos
                 </NavLink>
             </nav>

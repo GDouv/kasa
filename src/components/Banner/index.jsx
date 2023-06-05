@@ -1,18 +1,20 @@
 import HomeBannerImg from "../../assets/IMG.jpg";
-import "../../utils/styles/Banner.css";
+import bannerStyle from "../../utils/styles/Banner.module.css";
 
 export default function Banner() {
     return (
-        <div className="bg-banner">
-            <div className="bg-img-container">
+        <div className={bannerStyle.banner}>
+            <div className={bannerStyle["img-container"]}>
                 <img
                     src={HomeBannerImg}
                     alt="Image de fond: photographie d'une falaise rocheuse peuplée de quelques arbres, avec une mer agitée, par temps gris."
-                    className="bg-img"
+                    className={bannerStyle.img}
                 />
             </div>
-            <div className="bg-title-container">
-                <h1 className="bg-title">Chez vous, partout et ailleurs</h1>
+            <div className={bannerStyle["title-container"]}>
+                <h1 className={bannerStyle.title}>
+                    Chez vous, partout et ailleurs
+                </h1>
             </div>
         </div>
     );

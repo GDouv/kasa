@@ -1,31 +1,38 @@
-.Header {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-nav {
+.nav {
     line-height: 142.6%;
     display: flex;
     justify-content: space-between;
 }
 
-.header-nav a {
+.nav a {
     color: #ff6060;
+}
+
+.accueil-link {
     text-decoration: none;
 }
 
-.header-nav a:hover {
+.apropos-link {
+    text-decoration: none;
+}
+
+.nav a:hover {
     text-decoration: underline;
 }
 
-.header-nav .active {
+.active {
     text-decoration: underline;
 }
 
 @media screen and (min-width: 1024px) {
-    .Header {
+    .header {
         margin: 40px 100px 63px 100px;
     }
 
@@ -35,7 +42,7 @@
         margin-right: 10px;
     }
 
-    .header-nav {
+    .nav {
         height: 34px;
         width: 309px;
         font-size: 24px;
@@ -47,7 +54,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .Header {
+    .header {
         margin: 30px 60px;
     }
 
@@ -55,7 +62,7 @@
         width: 80%;
     }
 
-    .header-nav {
+    .nav {
         height: 34px;
         width: 220px;
         font-size: 18px;
@@ -63,13 +70,8 @@
 }
 
 @media screen and (max-width: 767px) {
-    .Header {
+    .header {
         margin: 20px 20px 16px 20px;
-    }
-
-    .bg-banner {
-        display: flex;
-        justify-content: center;
     }
 
     .logo {
@@ -78,7 +80,7 @@
         margin-right: 10px;
     }
 
-    .header-nav {
+    .nav {
         height: 17px;
         width: 140px;
         font-size: 12px;
@@ -97,7 +99,7 @@
 }
 
 @media screen and (max-width: 312px) {
-    .Header {
+    .header {
         flex-direction: column;
     }
 

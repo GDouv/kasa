@@ -1,4 +1,4 @@
-.Footer {
+.footer {
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     height: 209px;
 }
 
-.logo-white {
+.logo {
     width: 122px;
     height: 39.44px;
 }
@@ -24,7 +24,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .logo-white-container {
+    .logo-container {
         margin: 66px 0 28.56px 0;
     }
 
@@ -34,7 +34,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .logo-white-container {
+    .logo-container {
         margin: 64px 0 14.28px 0;
     }
 
@@ -44,7 +44,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .logo-white-container {
+    .logo-container {
         margin-top: 62px;
     }
 
