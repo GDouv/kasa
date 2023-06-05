@@ -1,7 +1,7 @@
 import HomeBannerImg from "../../assets/IMG.jpg";
 import "../../utils/styles/Banner.css";
 
-export default function Background() {
+export default function Banner() {
     return (
         <div className="bg-banner">
             <div className="bg-img-container">

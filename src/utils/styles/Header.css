@@ -27,7 +27,6 @@
 @media screen and (min-width: 1024px) {
     .Header {
         margin: 40px 100px 63px 100px;
-        max-width: 1240px;
     }
 
     .logo {
@@ -50,7 +49,6 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .Header {
         margin: 30px 60px;
-        max-width: 960px;
     }
 
     .logo {
@@ -67,7 +65,6 @@
 @media screen and (max-width: 767px) {
     .Header {
         margin: 20px 20px 16px 20px;
-        max-width: 740px;
     }
 
     .bg-banner {

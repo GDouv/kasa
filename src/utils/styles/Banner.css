@@ -5,6 +5,7 @@
 }
 
 .bg-img {
+    width: 100%;
     object-fit: cover;
     opacity: 0.7;
 }
@@ -53,7 +54,7 @@
     .bg-banner {
         display: flex;
         justify-content: center;
-        margin: 0 60px 30px 60px;
+        margin: 0 60px 32.5px 60px;
     }
 
     .bg-img-container {
@@ -64,7 +65,6 @@
 
     .bg-img {
         border-radius: 15px;
-        max-width: 920px;
     }
 
     .bg-title-container {
@@ -87,14 +87,13 @@
 
     .bg-img-container {
         max-height: 111px;
-        border-radius: 10px;
         max-width: 740px;
+        border-radius: 10px;
     }
 
     .bg-img {
         border-radius: 10px;
-        max-width: 740px;
-        scale: 1;
+        scale: 1.85;
     }
 
     .bg-title-container {
