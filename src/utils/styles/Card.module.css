@@ -1,0 +1,54 @@
+.link {
+    text-decoration: none;
+}
+
+.card {
+    height: 255px;
+    width: 335px;
+    border-radius: 10px;
+}
+
+.card img {
+    background: #ff6060;
+    border-radius: 10px;
+    height: 255px;
+    width: 335px;
+}
+
+.title {
+    color: white;
+    position: relative;
+    top: -60px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    height: 52px;
+    margin: 0 0 0 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        height: 340px;
+        width: 340px;
+    }
+
+    .card img {
+        min-height: 340px;
+        min-width: 340px;
+        object-fit: cover;
+    }
+
+    .title {
+        top: -70px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .card {
+        width: 300px;
+    }
+
+    .card img {
+        width: 300px;
+    }
+}

@@ -4,7 +4,7 @@ import footerStyle from "../../utils/styles/Footer.module.css";
 
 export default function Footer() {
     return (
-        <header className={footerStyle.footer}>
+        <footer className={footerStyle.footer}>
             <Link to="/" className={footerStyle["logo-container"]}>
                 <img className={footerStyle.logo} src={Logo} />
             </Link>
@@ -13,6 +13,6 @@ export default function Footer() {
                     © 2020 Kasa. All rights reserved
                 </p>
             </div>
-        </header>
+        </footer>
     );
 }

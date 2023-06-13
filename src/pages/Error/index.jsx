@@ -1,6 +1,8 @@
 import { useRouteError } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import errorStyle from "../../utils/styles/Error.module.css";
 
 export default function Error() {
     const error = useRouteError();
@@ -9,11 +11,15 @@ export default function Error() {
     return (
         <>
             <Header />
-            <div id="error">
+            <div className={errorStyle.container}>
                 <h1>404</h1>
-                <p>Oups! La page que vous demandez n&apos;existe pas.</p>
+                <div className={errorStyle["text-container"]}>
+                    <p>Oups! La page que&nbsp;</p>
+                    <p>vous demandez n&apos;existe pas.</p>
+                </div>
                 <Link to="/">Retourner sur la page d&apos;accueil</Link>
             </div>
+            <Footer />
         </>
     );
 }

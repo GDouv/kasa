@@ -1,22 +1,19 @@
 import Header from "../../components/Header";
-import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
+import Banner from "../../components/Banner";
+import homeStyle from "../../utils/styles/Home.module.css";
+import CardsList from "../../components/CardsList";
 
 export default function Home() {
     return (
         <>
             <Header />
-            <main className="Home">
+            <main>
                 <section>
                     <Banner />
                 </section>
-                <section>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <section className={homeStyle.cards}>
+                    <CardsList />
                 </section>
             </main>
             <Footer />

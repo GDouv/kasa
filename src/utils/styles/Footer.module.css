@@ -24,6 +24,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .footer {
+        margin-top: 43px;
+    }
+
     .logo-container {
         margin: 66px 0 28.56px 0;
     }
@@ -34,6 +38,10 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer {
+        margin-top: 31px;
+    }
+
     .logo-container {
         margin: 64px 0 14.28px 0;
     }
@@ -44,6 +52,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .footer {
+        margin-top: 20px;
+    }
+
     .logo-container {
         margin-top: 62px;
     }

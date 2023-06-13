@@ -2,21 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.svg";
 import headerStyle from "../../utils/styles/Header.module.css";
 
-// const header = document.getElementsByClassName("Header");
-
-// function appendContent() {
-//     const createLink = document.createElement("Link");
-//     const createImg = document.createElement("img");
-
-//     header.appendChild(createLink);
-//     createLink.setAttribute("to", "/");
-
-//     createLink.appendChild(createImg);
-
-//     createImg.setAttribute("className", "logo");
-//     createImg.setAttribute("src", { Logo });
-// }
-
 export default function Header() {
     return (
         <header className={headerStyle.header}>
@@ -32,7 +17,7 @@ export default function Header() {
                             : headerStyle["accueil-link"]
                     }
                     to="/"
-                    exact
+                    exact="true"
                 >
                     Accueil
                 </NavLink>
