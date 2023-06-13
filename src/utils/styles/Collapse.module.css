@@ -1,0 +1,5 @@
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
