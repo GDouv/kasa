@@ -2,6 +2,8 @@ import Collapse from "../Collapse";
 
 const collapseTitles = ["Fiabilité", "Respect", "Service", "Sécurité"];
 
+// const collapseText = [];
+
 export default function CollapsesList() {
     return (
         <div>
