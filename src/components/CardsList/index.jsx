@@ -1,15 +1,12 @@
 import logements from "../../datas/logements.json";
 import Card from "../Card";
-import cardsListStyle from "../../utils/styles/CardsList.module.css";
+import style from "../../utils/styles/CardsList.module.css";
 
 export default function CardsList() {
     return (
-        <div className={cardsListStyle.container}>
+        <div className={style.container}>
             {logements.map((logement) => (
-                <div
-                    key={logement.id}
-                    className={cardsListStyle["card-container"]}
-                >
+                <div key={logement.id} className={style["card-container"]}>
                     <Card title={logement.title} cover={logement.cover} />
                 </div>
             ))}
