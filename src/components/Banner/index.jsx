@@ -1,7 +1,10 @@
+import PropTypes from "prop-types";
 import HomeBannerImg from "../../assets/IMG.jpg";
 import style from "../../utils/styles/Banner.module.css";
 
-export default function Banner() {
+export default function Banner(props) {
+    const { currentPage } = props;
+
     return (
         <div className={style.banner}>
             <div className={style["img-container"]}>
@@ -11,9 +14,19 @@ export default function Banner() {
                     className={style.img}
                 />
             </div>
-            <div className={style["title-container"]}>
+            <div
+                className={
+                    currentPage !== "home"
+                        ? style["display-none"]
+                        : style["title-container"]
+                }
+            >
                 <h1 className={style.title}>Chez vous, partout et ailleurs</h1>
             </div>
         </div>
     );
 }
+
+Banner.propTypes = {
+    currentPage: PropTypes.string,
+};

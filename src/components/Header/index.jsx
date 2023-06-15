@@ -1,14 +1,24 @@
+import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.svg";
 import style from "../../utils/styles/Header.module.css";
 
-export default function Header() {
+export default function Header(props) {
+    const { onPageChange } = props;
+
+    const setPageHome = () => {
+        onPageChange("home");
+    };
+
+    const setPageAPropos = () => {
+        onPageChange("a-propos");
+    };
+
     return (
         <header className={style.header}>
             <Link to="/">
                 <img className={style.logo} src={Logo} />
             </Link>
-            {/* {appendContent()} */}
             <nav className={style.nav}>
                 <NavLink
                     className={({ isActive }) =>
@@ -18,6 +28,7 @@ export default function Header() {
                     }
                     to="/"
                     exact="true"
+                    onClick={setPageHome}
                 >
                     Accueil
                 </NavLink>
@@ -28,6 +39,7 @@ export default function Header() {
                             : style["apropos-link"]
                     }
                     to="/a-propos"
+                    onClick={setPageAPropos}
                 >
                     A Propos
                 </NavLink>
@@ -35,3 +47,7 @@ export default function Header() {
         </header>
     );
 }
+
+Header.propTypes = {
+    onPageChange: PropTypes.func,
+};

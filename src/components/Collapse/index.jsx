@@ -31,6 +31,33 @@ export default function Collapse({ title, text }) {
     );
 }
 
+// export default function Collapse({ title, text }) {
+//     const [isOpen, setIsOpen] = useState(true);
+//     return (
+//         <div>
+//             <div onClick={() => setIsOpen(true)} className={style.dropdown}>
+//                 <div className={style.title}>{title}</div>
+//                 <img
+//                     src={arrow}
+//                     alt="Flèche blanche vers le haut"
+//                     className={
+//                         isOpen
+//                             ? `${style.arrow} ${style.rotate}`
+//                             : `${style.arrow} ${style["no-rotate"]}`
+//                     }
+//                 />
+//             </div>
+//             <div
+//                 className={
+//                     isOpen ? style["text-container"] : style["display-none"]
+//                 }
+//             >
+//                 <p>{text}</p>
+//             </div>
+//         </div>
+//     );
+// }
+
 Collapse.propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
