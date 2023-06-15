@@ -22,16 +22,32 @@
 .arrow {
     width: 16px;
     margin-right: 7px;
+    animation-name: scaleUp;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.29, 0.58, 0.71, 0.34);
+    animation-delay: 350ms;
+}
+
+@keyframes scaleUp {
+    from {
+        scale: 1;
+    }
+    50% {
+        scale: 1.6;
+    }
+    to {
+        scale: 1;
+    }
 }
 
 .no-rotate {
-    transform: rotate(0deg);
-    transition: transform 300ms ease;
+    transform: rotate(360deg);
+    transition: transform 350ms cubic-bezier(1, -0.02, 0.64, 0.9);
 }
 
 .rotate {
     transform: rotate(180deg);
-    transition: transform 300ms ease;
+    transition: transform 350ms cubic-bezier(1, -0.02, 0.64, 0.9);
 }
 
 .text-container {
@@ -56,13 +72,65 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .dropdown-container {
+        position: relative;
+        top: -25px;
+        padding: 0 13.465%;
+    }
+
     .dropdown {
-        width: 1023px;
+        height: 47px;
+        margin-top: 31px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-left: 18px;
+    }
+
+    .arrow {
+        width: 24px;
+        margin-right: 33px;
+    }
+
+    .text-container {
+        padding: 33px 27px 19px 18px;
+    }
+
+    .text-container p {
+        margin: 0;
+        font-size: 24px;
     }
 }
 
-/* @media screen and (max-width: 335px) {
-    .dropdown {
-        min-width: 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .dropdown-container {
+        position: relative;
+        top: -12px;
+        padding: 0 104px;
     }
-} */
+
+    .dropdown {
+        height: 38px;
+        margin-top: 22px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-left: 14px;
+    }
+
+    .arrow {
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    .text-container {
+        padding: 28px 17px 18px 14px;
+    }
+
+    .text-container p {
+        margin: 0;
+        font-size: 18px;
+    }
+}

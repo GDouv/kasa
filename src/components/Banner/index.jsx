@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import HomeBannerImg from "../../assets/IMG.jpg";
+import AProposBannerImg from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
 import style from "../../utils/styles/Banner.module.css";
 
 export default function Banner(props) {
@@ -8,11 +9,19 @@ export default function Banner(props) {
     return (
         <div className={style.banner}>
             <div className={style["img-container"]}>
-                <img
-                    src={HomeBannerImg}
-                    alt="Image de fond: photographie d'une falaise rocheuse peuplée de quelques arbres, avec une mer agitée, par temps gris."
-                    className={style.img}
-                />
+                {currentPage === "a-propos" ? (
+                    <img
+                        src={AProposBannerImg}
+                        alt="Photographie d'un zone montagneuse avec une forêt verte au premier plan et des montagnes enneigées au second plan."
+                        className={style.img}
+                    />
+                ) : (
+                    <img
+                        src={HomeBannerImg}
+                        alt="Image de fond: photographie d'une falaise rocheuse peuplée de quelques arbres, avec une mer agitée, par temps gris."
+                        className={style.img}
+                    />
+                )}
             </div>
             <div
                 className={

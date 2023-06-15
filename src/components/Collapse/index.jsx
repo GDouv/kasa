@@ -4,11 +4,11 @@ import style from "../../utils/styles/Collapse.module.css";
 import arrow from "../../assets/Vector.svg";
 
 export default function Collapse({ title, text }) {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className={style["dropdown-container"]}>
-            <div onClick={() => setIsOpen(!isOpen)} className={style.dropdown}>
+            <div className={style.dropdown} onClick={() => setIsOpen(!isOpen)}>
                 <div className={style.title}>{title}</div>
                 <img
                     src={arrow}
@@ -17,11 +17,9 @@ export default function Collapse({ title, text }) {
                             ? "Flèche blanche vers le haut"
                             : "Flèche blanche vers le bas"
                     }
-                    className={
-                        isOpen
-                            ? `${style.arrow} ${style.rotate}`
-                            : `${style.arrow} ${style["no-rotate"]}`
-                    }
+                    className={`${style.arrow} ${
+                        isOpen ? style.rotate : style["no-rotate"]
+                    }`}
                 />
             </div>
             {isOpen && (
