@@ -124,3 +124,7 @@
         width: 150px;
     }
 }
+
+.big-banner {
+    max-height: 223px;
+}

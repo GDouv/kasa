@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         errorElement: <Error />,
     },
     {
-        path: "/fiche-logement",
+        path: "/fiche-logement/:id",
         element: <FicheLogement />,
         errorElement: <Error />,
     },

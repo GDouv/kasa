@@ -1,0 +1,127 @@
+.slideshow {
+    display: flex;
+    justify-content: center;
+    position: static;
+    height: 255px;
+    margin: 23px 20px 15px 20px;
+}
+
+.picture {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.arrow-container {
+    height: 255px;
+    width: 30%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    height: 19.8px;
+    width: fit-content;
+    position: absolute;
+}
+
+.left-arrow-container {
+    left: 5%;
+}
+
+.left-arrow {
+    rotate: 0deg;
+    left: 5.5%;
+}
+
+.right-arrow-container {
+    right: 5%;
+}
+
+.right-arrow {
+    rotate: 180deg;
+    right: 5.5%;
+}
+
+@media screen and (min-width: 1024px) {
+    .slideshow {
+        height: 415px;
+        margin: -43px 100px 0 100px;
+    }
+
+    .picture {
+        border-radius: 25px;
+    }
+
+    .arrow-container {
+        height: 415px;
+    }
+
+    .arrow {
+        height: 79.2px;
+    }
+
+    .left-arrow-container {
+        left: 7%;
+    }
+
+    .left-arrow {
+        left: 5.6%;
+        top: 155px;
+    }
+
+    .right-arrow-container {
+        right: 7%;
+    }
+
+    .right-arrow {
+        right: 5.6%;
+        top: 155px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .slideshow {
+        height: 335px;
+        margin: -10px 60px 7.5px 60px;
+    }
+
+    .picture {
+        border-radius: 17.5px;
+    }
+
+    .arrow-container {
+        height: 335px;
+    }
+
+    .arrow {
+        height: 49.5px;
+    }
+
+    .left-arrow-container {
+        left: 6%;
+    }
+
+    .left-arrow {
+        left: 5.55%;
+    }
+
+    .right-arrow-container {
+        right: 6%;
+    }
+
+    .right-arrow {
+        right: 5.55%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1162px) {
+    .left-arrow {
+        left: 9%;
+    }
+
+    .right-arrow {
+        right: 9%;
+    }
+}

@@ -7,7 +7,11 @@ export default function CardsList() {
         <div className={style.container}>
             {logements.map((logement) => (
                 <div key={logement.id} className={style["card-container"]}>
-                    <Card title={logement.title} cover={logement.cover} />
+                    <Card
+                        title={logement.title}
+                        cover={logement.cover}
+                        id={logement.id}
+                    />
                 </div>
             ))}
         </div>
