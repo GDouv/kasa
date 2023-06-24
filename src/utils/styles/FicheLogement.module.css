@@ -1,0 +1,205 @@
+.content-container {
+    margin: -4px 20px 0 20px;
+}
+
+.title {
+    color: #ff6060;
+    font-size: 18px;
+    height: fit-content;
+    line-height: 25.67px;
+    margin: 0 0 6px 0;
+}
+
+.location {
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 14px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.tags-container {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16.5px 0;
+}
+
+.tag {
+    font-size: 10px;
+    min-height: 18px;
+    height: fit-content;
+    width: 84px;
+    background-color: #ff6060;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-justify: center;
+}
+
+.rating-host-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16.5px;
+}
+
+.rating-container {
+    height: 18px;
+    width: 98px;
+}
+
+.host-container {
+    display: flex;
+    align-items: center;
+}
+
+.host-name {
+    margin: 0;
+    color: #ff6060;
+    font-size: 12px;
+    margin-right: 10.5px;
+}
+
+.host-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+}
+
+.margin-collapse {
+    margin-bottom: 20px;
+}
+
+.equipments-text {
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .content-container {
+        margin: 0 100px 0 100px;
+    }
+
+    .title {
+        font-size: 36px;
+        line-height: 142.6%;
+        margin: 30px 0 0 0;
+    }
+
+    .location {
+        font-size: 18px;
+        height: 26px;
+        margin: 0 0 20px 0;
+    }
+
+    .tags-container {
+        margin: 0 0 24px 0;
+    }
+
+    .tag {
+        font-size: 14px;
+        min-height: 25px;
+        width: 115px;
+        border-radius: 10px;
+    }
+
+    .infos-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rating-host-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .host-name {
+        font-size: 18px;
+    }
+
+    .host-picture {
+        height: 64px;
+        width: 64px;
+        border-radius: 64px;
+    }
+
+    .rating-container {
+        height: 36px;
+        width: 196px;
+        margin-top: 21px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .margin-collapse {
+        margin-bottom: 0;
+        margin-right: 76px;
+    }
+
+    .collapses-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .equipments {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .content-container {
+        margin: 0 60px 0 60px;
+    }
+
+    .title {
+        font-size: 27px;
+        line-height: 142.6%;
+        margin: 15px 0 3px 0;
+    }
+
+    .location {
+        font-size: 16px;
+        height: 24px;
+        margin: 0 0 15px 0;
+    }
+
+    .tags-container {
+        margin: 0 0 10px 0;
+    }
+
+    .tag {
+        font-size: 12px;
+        min-height: 21.5px;
+        width: 100px;
+        border-radius: 7.5px;
+    }
+
+    .rating-host-container {
+        margin-bottom: 28px;
+    }
+
+    .host-name {
+        font-size: 15px;
+    }
+
+    .host-picture {
+        height: 48px;
+        width: 48px;
+        border-radius: 48px;
+    }
+
+    .rating-container {
+        height: 27px;
+        width: 147px;
+    }
+}

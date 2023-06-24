@@ -62,9 +62,13 @@
     min-width: 100%;
 }
 
-.text-container p {
+.text {
     margin: 0;
     font-size: 12px;
+}
+
+.text-font-size {
+    margin: 0;
 }
 
 .display-none {
@@ -75,7 +79,6 @@
     .dropdown-container {
         position: relative;
         top: -25px;
-        padding: 0 13.465%;
     }
 
     .dropdown {
@@ -97,9 +100,22 @@
         padding: 33px 27px 19px 18px;
     }
 
-    .text-container p {
+    .text {
         margin: 0;
         font-size: 24px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    .font-size {
+        font-size: 18px;
+    }
+
+    .text-font-size {
+        font-size: 18px;
+        line-height: 142.6%;
     }
 }
 
@@ -107,7 +123,6 @@
     .dropdown-container {
         position: relative;
         top: -12px;
-        padding: 0 104px;
     }
 
     .dropdown {
@@ -129,8 +144,21 @@
         padding: 28px 17px 18px 14px;
     }
 
-    .text-container p {
+    .text {
         margin: 0;
         font-size: 18px;
+    }
+
+    .radius {
+        border-radius: 7.5px;
+    }
+
+    .font-size {
+        font-size: 15.5px;
+    }
+
+    .text-font-size {
+        font-size: 15px;
+        line-height: 142.6%;
     }
 }

@@ -7,3 +7,9 @@
 .container {
     margin: -17px 20px 0 20px;
 }
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin: -18px 100px 0 100px;
+    }
+}

@@ -15,7 +15,7 @@ export default function APropos() {
         <div>
             <Header onPageChange={handlePageChange} />
             <Banner currentPage={currentPage} />
-            <CollapsesList />
+            <CollapsesList currentPage={currentPage} />
             <Footer />
         </div>
     );

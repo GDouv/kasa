@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import arrow from "../../assets/Arrow.svg";
 import style from "../../utils/styles/Slideshow.module.css";
 
-export default function Slideshow({ imgUrl }) {
+export default function Slideshow({ imgsUrls, imgsNumber }) {
     const [imgIndex, setImgIndex] = useState(0);
 
     function handleClickR() {
-        if (imgIndex < imgUrl.length - 1) {
+        if (imgIndex < imgsUrls.length - 1) {
             setImgIndex(imgIndex + 1);
         } else {
             setImgIndex(0);
@@ -18,8 +18,20 @@ export default function Slideshow({ imgUrl }) {
         if (imgIndex > 0) {
             setImgIndex(imgIndex - 1);
         } else {
-            setImgIndex(imgUrl.length - 1);
+            setImgIndex(imgsUrls.length - 1);
         }
+    }
+
+    function DisplayImgIndex() {
+        if (imgsNumber > 1) {
+            return (
+                <div className={style["img-index-display-container"]}>
+                    <div className={style["img-index-display"]}>{`${
+                        imgIndex + 1
+                    }/${imgsNumber}`}</div>
+                </div>
+            );
+        } else return null;
     }
 
     return (
@@ -36,9 +48,10 @@ export default function Slideshow({ imgUrl }) {
             </div>
             <img
                 className={style.picture}
-                src={imgUrl[imgIndex]}
+                src={imgsUrls[imgIndex]}
                 alt="Photographie de l'intérieur du logement"
             />
+            <DisplayImgIndex />
             <div
                 className={`${style["right-arrow-container"]} ${style["arrow-container"]}`}
                 onClick={handleClickR}
@@ -54,5 +67,6 @@ export default function Slideshow({ imgUrl }) {
 }
 
 Slideshow.propTypes = {
-    imgUrl: PropTypes.array,
+    imgsUrls: PropTypes.array,
+    imgsNumber: PropTypes.number,
 };

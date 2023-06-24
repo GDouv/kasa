@@ -1,4 +1,5 @@
 import Collapse from "../Collapse";
+import PropTypes from "prop-types";
 import style from "../../utils/styles/CollapsesList.module.css";
 
 const collapseContent = [
@@ -20,14 +21,22 @@ const collapseContent = [
     },
 ];
 
-export default function CollapsesList() {
+export default function CollapsesList({ currentPage }) {
     return (
         <div className={style.container}>
             {collapseContent.map(({ title, text }) => (
                 <div key={`collapse ${title}`} className={style.item}>
-                    <Collapse title={title} text={text} />
+                    <Collapse
+                        title={title}
+                        text={text}
+                        currentPage={currentPage}
+                    />
                 </div>
             ))}
         </div>
     );
 }
+
+CollapsesList.propTypes = {
+    currentPage: PropTypes.string,
+};
