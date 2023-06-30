@@ -1,28 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./utils/styles/index.css";
-import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { CurrentPageProvider } from "./utils/context";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import APropos from "./pages/APropos";
 import FicheLogement from "./pages/FicheLogement";
 import Error from "./pages/Error";
+import "./utils/styles/index.css";
+
+import reportWebVitals from "./reportWebVitals";
+
+function Layout() {
+    return (
+        <>
+            <CurrentPageProvider>
+                <Header />
+                <Outlet />
+                <Footer />
+            </CurrentPageProvider>
+        </>
+    );
+}
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <Home />,
-        errorElement: <Error />,
-    },
-    {
-        path: "/a-propos",
-        element: <APropos />,
-        errorElement: <Error />,
-    },
-    {
-        path: "/fiche-logement/:id",
-        element: <FicheLogement />,
-        errorElement: <Error />,
+        element: <Layout />,
+        errorElement: (
+            <CurrentPageProvider>
+                <Error />
+            </CurrentPageProvider>
+        ),
+        children: [
+            {
+                path: "/",
+                element: <Home />,
+            },
+            {
+                path: "/a-propos",
+                element: <APropos />,
+            },
+            {
+                path: "/fiche-logement/:id",
+                element: <FicheLogement />,
+            },
+        ],
     },
 ]);
 

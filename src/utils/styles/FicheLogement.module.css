@@ -78,6 +78,8 @@
 
 .equipments-text {
     margin: 0;
+    font-size: 12px;
+    line-height: 142.6%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -154,6 +156,12 @@
     .description {
         width: 100%;
     }
+
+    .equipments-text {
+        margin: 0;
+        font-size: 18px;
+        line-height: 142.6%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -201,5 +209,11 @@
     .rating-container {
         height: 27px;
         width: 147px;
+    }
+
+    .equipments-text {
+        margin: 0;
+        font-size: 15px;
+        line-height: 142.6%;
     }
 }

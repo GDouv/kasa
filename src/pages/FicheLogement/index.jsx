@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import logements from "../../datas/logements.json";
-import Header from "../../components/Header";
 import Slideshow from "../../components/Slideshow";
 import Collapse from "../../components/Collapse";
 import Rating from "../../components/Rating";
@@ -12,7 +11,6 @@ export default function FicheLogement() {
 
     return (
         <div>
-            <Header />
             <Slideshow
                 imgsUrls={logement.pictures}
                 imgsNumber={logement.pictures.length}
@@ -60,12 +58,12 @@ export default function FicheLogement() {
                         <Collapse
                             title={"Équipements"}
                             text={logement.equipments.map((equipment) => (
-                                <p
+                                <div
                                     className={style["equipments-text"]}
                                     key={`${logement.title}-${equipment}`}
                                 >
                                     {equipment}
-                                </p>
+                                </div>
                             ))}
                         />
                     </div>

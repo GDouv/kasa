@@ -2,21 +2,20 @@ import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.svg";
 import style from "../../utils/styles/Header.module.css";
+import { CurrentPageContext } from "../../utils/context";
+import { useContext } from "react";
 
-export default function Header(props) {
-    const { onPageChange } = props;
-
-    const setPageHome = () => {
-        onPageChange("home");
-    };
-
-    const setPageAPropos = () => {
-        onPageChange("a-propos");
-    };
+export default function Header() {
+    const { handlePageChange, currentPage } = useContext(CurrentPageContext);
 
     return (
         <header className={style.header}>
-            <Link to="/">
+            <Link
+                to="/"
+                onClick={() =>
+                    currentPage !== "home" ? handlePageChange("home") : null
+                }
+            >
                 <img className={style.logo} src={Logo} />
             </Link>
             <nav className={style.nav}>
@@ -28,7 +27,7 @@ export default function Header(props) {
                     }
                     to="/"
                     exact="true"
-                    onClick={setPageHome}
+                    onClick={() => handlePageChange("home")}
                 >
                     Accueil
                 </NavLink>
@@ -39,7 +38,7 @@ export default function Header(props) {
                             : style["apropos-link"]
                     }
                     to="/a-propos"
-                    onClick={setPageAPropos}
+                    onClick={() => handlePageChange("a-propos")}
                 >
                     A Propos
                 </NavLink>

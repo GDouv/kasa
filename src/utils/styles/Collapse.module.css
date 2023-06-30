@@ -67,10 +67,6 @@
     font-size: 12px;
 }
 
-.text-font-size {
-    margin: 0;
-}
-
 .display-none {
     display: none;
 }
@@ -109,13 +105,8 @@
         border-radius: 10px;
     }
 
-    .font-size {
+    .title-font-size {
         font-size: 18px;
-    }
-
-    .text-font-size {
-        font-size: 18px;
-        line-height: 142.6%;
     }
 }
 
@@ -153,12 +144,7 @@
         border-radius: 7.5px;
     }
 
-    .font-size {
+    .title-font-size {
         font-size: 15.5px;
-    }
-
-    .text-font-size {
-        font-size: 15px;
-        line-height: 142.6%;
     }
 }

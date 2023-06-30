@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 import HomeBannerImg from "../../assets/IMG.jpg";
 import AProposBannerImg from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
 import style from "../../utils/styles/Banner.module.css";
+import { CurrentPageContext } from "../../utils/context";
+import { useContext } from "react";
 
-export default function Banner(props) {
-    const { currentPage } = props;
+export default function Banner() {
+    const { currentPage } = useContext(CurrentPageContext);
 
     return (
         <div className={style.banner}>

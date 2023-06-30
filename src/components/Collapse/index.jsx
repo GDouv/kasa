@@ -2,8 +2,12 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import style from "../../utils/styles/Collapse.module.css";
 import arrow from "../../assets/Vector.svg";
-export default function Collapse({ title, text, currentPage }) {
+import { CurrentPageContext } from "../../utils/context";
+import { useContext } from "react";
+export default function Collapse({ title, text }) {
     const [isOpen, setIsOpen] = useState(false);
+
+    const { currentPage } = useContext(CurrentPageContext);
 
     return (
         <div className={style["dropdown-container"]}>
@@ -15,7 +19,9 @@ export default function Collapse({ title, text, currentPage }) {
             >
                 <div
                     className={`${style.title} ${
-                        currentPage === "a-propos" ? null : style["font-size"]
+                        currentPage === "a-propos"
+                            ? null
+                            : style["title-font-size"]
                     }`}
                 >
                     {title}
@@ -34,15 +40,7 @@ export default function Collapse({ title, text, currentPage }) {
             </div>
             {isOpen && (
                 <div className={style["text-container"]}>
-                    <p
-                        className={`${
-                            currentPage === "a-propos"
-                                ? style["text"]
-                                : style["text-font-size"]
-                        }`}
-                    >
-                        {text}
-                    </p>
+                    <div className={style["text"]}>{text}</div>
                 </div>
             )}
         </div>

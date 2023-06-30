@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useRouteError } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
@@ -9,15 +9,9 @@ export default function Error() {
     const error = useRouteError();
     console.error(error);
 
-    const [currentPage, setCurrentPage] = useState("error");
-
-    const handlePageChange = (newPage) => {
-        setCurrentPage(newPage);
-    };
-
     return (
         <>
-            <Header onPageChange={handlePageChange} currentPage={currentPage} />
+            <Header />
             <div className={style.container}>
                 <h1>404</h1>
                 <div className={style["text-container"]}>
