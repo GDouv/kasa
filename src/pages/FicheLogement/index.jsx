@@ -1,22 +1,23 @@
 import { useParams } from "react-router-dom";
 import logements from "../../datas/logements.json";
 import Slideshow from "../../components/Slideshow";
-import Collapse from "../../components/Collapse";
 import Rating from "../../components/Rating";
+import Collapse from "../../components/Collapse";
 import style from "../../utils/styles/FicheLogement.module.css";
 
 export default function FicheLogement() {
     const { id } = useParams();
+
     const logement = logements.find((logement) => logement.id === id);
 
     return (
-        <div>
+        <>
             <Slideshow
                 imgsUrls={logement.pictures}
                 imgsNumber={logement.pictures.length}
             />
             <div className={style["content-container"]}>
-                <div className={style["infos-container"]}>
+                <section className={style["infos-container"]}>
                     <div className={style["title-location-tags-container"]}>
                         <h1 className={style.title}>{logement.title}</h1>
                         <h2 className={style.location}>{logement.location}</h2>
@@ -45,8 +46,8 @@ export default function FicheLogement() {
                             />
                         </div>
                     </div>
-                </div>
-                <div className={style["collapses-container"]}>
+                </section>
+                <section className={style["collapses-container"]}>
                     <div className={style.description}>
                         <Collapse
                             title={"Description"}
@@ -67,8 +68,8 @@ export default function FicheLogement() {
                             ))}
                         />
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
+        </>
     );
 }

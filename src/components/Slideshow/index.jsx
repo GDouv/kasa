@@ -1,5 +1,5 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useState } from "react";
 import arrow from "../../assets/Arrow.svg";
 import style from "../../utils/styles/Slideshow.module.css";
 

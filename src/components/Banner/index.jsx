@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import HomeBannerImg from "../../assets/IMG.jpg";
-import AProposBannerImg from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
-import style from "../../utils/styles/Banner.module.css";
-import { CurrentPageContext } from "../../utils/context";
 import { useContext } from "react";
+import { CurrentPageContext } from "../../utils/context";
+import AProposBannerImg from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
+import HomeBannerImg from "../../assets/IMG.jpg";
+import style from "../../utils/styles/Banner.module.css";
 
 export default function Banner() {
     const { currentPage } = useContext(CurrentPageContext);

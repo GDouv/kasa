@@ -82,6 +82,11 @@
     line-height: 142.6%;
 }
 
+.description p {
+    line-height: 142.6%;
+    font-size: 12px;
+}
+
 @media screen and (min-width: 1024px) {
     .content-container {
         margin: 0 100px 0 100px;
@@ -157,6 +162,11 @@
         width: 100%;
     }
 
+    .description p {
+        font-size: 18px;
+        line-height: 142.6%;
+    }
+
     .equipments-text {
         margin: 0;
         font-size: 18px;
@@ -213,7 +223,12 @@
 
     .equipments-text {
         margin: 0;
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 142.6%;
+    }
+
+    .description p {
+        font-size: 16px;
         line-height: 142.6%;
     }
 }

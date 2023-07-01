@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import style from "../../utils/styles/Card.module.css";
 
 export default function Card({ title, cover, id }) {

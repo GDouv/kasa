@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CurrentPageContext } from "../../utils/context";
 import Logo from "../../assets/LOGO.svg";
 import style from "../../utils/styles/Header.module.css";
-import { CurrentPageContext } from "../../utils/context";
-import { useContext } from "react";
 
 export default function Header() {
     const { handlePageChange, currentPage } = useContext(CurrentPageContext);

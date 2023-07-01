@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 import { CurrentPageProvider } from "./utils/context";
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -15,13 +15,11 @@ import reportWebVitals from "./reportWebVitals";
 
 function Layout() {
     return (
-        <>
-            <CurrentPageProvider>
-                <Header />
-                <Outlet />
-                <Footer />
-            </CurrentPageProvider>
-        </>
+        <CurrentPageProvider>
+            <Header />
+            <Outlet />
+            <Footer />
+        </CurrentPageProvider>
     );
 }
 

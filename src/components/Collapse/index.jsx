@@ -1,9 +1,9 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
-import style from "../../utils/styles/Collapse.module.css";
-import arrow from "../../assets/Vector.svg";
-import { CurrentPageContext } from "../../utils/context";
+import { useState } from "react";
 import { useContext } from "react";
+import { CurrentPageContext } from "../../utils/context";
+import arrow from "../../assets/Vector.svg";
+import style from "../../utils/styles/Collapse.module.css";
 export default function Collapse({ title, text }) {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +40,7 @@ export default function Collapse({ title, text }) {
             </div>
             {isOpen && (
                 <div className={style["text-container"]}>
-                    <div className={style["text"]}>{text}</div>
+                    <p className={style["text"]}>{text}</p>
                 </div>
             )}
         </div>
