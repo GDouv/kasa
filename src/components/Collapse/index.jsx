@@ -58,5 +58,4 @@ export default function Collapse({ title, text }) {
 Collapse.propTypes = {
     title: PropTypes.string,
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-    currentPage: PropTypes.string,
 };
