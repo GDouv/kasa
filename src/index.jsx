@@ -28,7 +28,9 @@ const router = createBrowserRouter([
         element: <Layout />,
         errorElement: (
             <CurrentPageProvider>
+                <Header />
                 <Error />
+                <Footer />
             </CurrentPageProvider>
         ),
         children: [

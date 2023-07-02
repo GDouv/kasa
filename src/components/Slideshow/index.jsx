@@ -7,7 +7,7 @@ export default function Slideshow({ imgsUrls, imgsNumber }) {
     const [imgIndex, setImgIndex] = useState(0);
 
     function handleClickR() {
-        if (imgIndex < imgsUrls.length - 1) {
+        if (imgIndex < imgsNumber - 1) {
             setImgIndex(imgIndex + 1);
         } else {
             setImgIndex(0);
@@ -18,7 +18,7 @@ export default function Slideshow({ imgsUrls, imgsNumber }) {
         if (imgIndex > 0) {
             setImgIndex(imgIndex - 1);
         } else {
-            setImgIndex(imgsUrls.length - 1);
+            setImgIndex(imgsNumber - 1);
         }
     }
 
