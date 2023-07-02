@@ -40,7 +40,15 @@ export default function Collapse({ title, text }) {
             </div>
             {isOpen && (
                 <div className={style["text-container"]}>
-                    <p className={style["text"]}>{text}</p>
+                    <div
+                        className={`${
+                            currentPage === "a-propos"
+                                ? style["text-big"]
+                                : style["text"]
+                        }`}
+                    >
+                        {text}
+                    </div>
                 </div>
             )}
         </div>

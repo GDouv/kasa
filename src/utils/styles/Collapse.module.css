@@ -62,6 +62,12 @@
     min-width: 100%;
 }
 
+.text-big {
+    margin: 0;
+    font-size: 12px;
+    line-height: 142.6%;
+}
+
 .text {
     margin: 0;
     font-size: 12px;
@@ -97,9 +103,15 @@
         padding: 33px 27px 19px 18px;
     }
 
-    .text {
+    .text-big {
         margin: 0;
         font-size: 24px;
+        line-height: 142.6%;
+    }
+
+    .text {
+        margin: 0;
+        font-size: 18px;
         line-height: 142.6%;
     }
 
@@ -137,9 +149,15 @@
         padding: 28px 17px 18px 14px;
     }
 
-    .text {
+    .text-big {
         margin: 0;
         font-size: 18px;
+        line-height: 142.6%;
+    }
+
+    .text {
+        margin: 0;
+        font-size: 16px;
         line-height: 142.6%;
     }
 

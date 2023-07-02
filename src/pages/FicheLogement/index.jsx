@@ -59,12 +59,12 @@ export default function FicheLogement() {
                         <Collapse
                             title={"Équipements"}
                             text={logement.equipments.map((equipment) => (
-                                <div
+                                <p
                                     className={style["equipments-text"]}
                                     key={`${logement.title}-${equipment}`}
                                 >
                                     {equipment}
-                                </div>
+                                </p>
                             ))}
                         />
                     </div>

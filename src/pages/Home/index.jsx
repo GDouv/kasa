@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <main>
             <section>
-                <Banner currentPage={""} />
+                <Banner />
             </section>
             <section className={style.cards}>
                 <CardsList />
